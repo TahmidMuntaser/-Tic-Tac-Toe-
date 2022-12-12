@@ -2,11 +2,14 @@
 
 using namespace std;
 
-int main(int argc, char const *argv[])
-{
-    int space[3][3] = {{1, 2, 3},{4, 5, 6}, {7, 8, 9}};
+int space[3][3] = {{1, 2, 3},{4, 5, 6}, {7, 8, 9}};
     // 3 rows and 3 coloums....
 
+int row, coloum; //Global variables
+
+void funtionStr()
+{
+   
     system("cls");
 
     string p1, p2;
@@ -24,7 +27,7 @@ int main(int argc, char const *argv[])
     //#Structure:
 
     cout<<"            |     |    "<<endl;
-    cout<<"        "<< space[0][0]<<"   |  "<<space[0][1]<<"  |  "<<space[0][2]<<"  "<<endl;
+    cout<<"        "<< space[0][0]<<"   |  "<<space[0][1]<<"  |  "<<space[0][2]<<"  "<<endl; //Adding numbers in the structure.
     cout<<"         ___|_____|____"<<endl;
     cout<<"            |     |    "<<endl;
     cout<<"        "<< space[1][0]<<"   |  "<<space[1][1]<<"  |  "<<space[1][2]<<"  "<<endl;
@@ -34,8 +37,10 @@ int main(int argc, char const *argv[])
     cout<<"            |     |    "<<endl<<endl<<endl;
 
 
+}
 
+void Value()
+{
+    int digit;
 
-
-    return 0;
 }
