@@ -24,10 +24,13 @@ int main(int argc, char const *argv[])
     //#Structure:
 
     cout<<"            |     |    "<<endl;
+    cout<<"        "<< space[0][0]<<"   |  "<<space[0][1]<<"  |  "<<space[0][2]<<"  "<<endl;
     cout<<"         ___|_____|____"<<endl;
     cout<<"            |     |    "<<endl;
+    cout<<"        "<< space[1][0]<<"   |  "<<space[1][1]<<"  |  "<<space[1][2]<<"  "<<endl;
     cout<<"         ___|_____|____"<<endl;
     cout<<"            |     |    "<<endl;
+    cout<<"        "<< space[2][0]<<"   |  "<<space[2][1]<<"  |  "<<space[2][2]<<"  "<<endl;
     cout<<"            |     |    "<<endl<<endl<<endl;
 
 
