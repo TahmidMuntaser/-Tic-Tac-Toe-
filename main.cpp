@@ -4,8 +4,10 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
-    int space[3][3] = {{00, 01, 02},{10, 11, 12}, {20, 21, 22}};
+    int space[3][3] = {{1, 2, 3},{4, 5, 6}, {7, 8, 9}};
     // 3 rows and 3 coloums....
+
+    system("cls");
 
     string p1, p2;
 
@@ -15,8 +17,18 @@ int main(int argc, char const *argv[])
     cout<<"Enter the name of the second player: ";
     getline(cin, p2);
 
-    cout<<p1<<" is player1"<<endl;
-    cout<<p2<<" is player2"<<endl;
+    cout<<endl<<endl<<p1<<" is player1"<<endl;
+    cout<<endl<<p2<<" is player2"<<endl<<endl<<endl;
+    
+
+    //#Structure:
+
+    cout<<"            |     |    "<<endl;
+    cout<<"         ___|_____|____"<<endl;
+    cout<<"            |     |    "<<endl;
+    cout<<"         ___|_____|____"<<endl;
+    cout<<"            |     |    "<<endl;
+    cout<<"            |     |    "<<endl<<endl<<endl;
 
 
 
