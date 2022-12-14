@@ -7,14 +7,15 @@ int space[3][3] = {{1, 2, 3},{4, 5, 6}, {7, 8, 9}};
 
 int row, coloum; //Global variables..
 char token = 'X';
-
+bool tie;
+string p1, p2;
 
 void funtionStr()
 {
    
     system("cls");
 
-    string p1, p2;
+    
 
     cout<<"Enter the name of the first player: ";
     getline(cin, p1);
@@ -152,6 +153,79 @@ void Value()
 }
 
 
-bool funthree(){
+bool funthree(){ //For game going on or draw
+
+    for (int i = 0; i < 3; i++)//for win
+    {
+         if (space[i][0] == space[i][1]  && space[i][0] == space[i][2] || space[0][i] == space[1][i]  && space[0][i] == space[2][i])
+         {
+
+            // for X X X or O O O (1st condition before ||)
+            /*for X or O (2nd one)
+                  X or O
+                  X or O
+             */
+
+            return true;
+
+         }         
+    }
     
+    if (space[0][0] == space[1][1]  && space[1][1] == space[2][2] || space[0][2] == space[1][1]  && space[1][1] == space[2][0])
+    {
+        return true; /* for angle O
+                                    O 
+                                      O*/
+    }
+
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j< 3; j++)
+        {
+            if (space[i][j] != 'X' && space[i][j] != 'O')
+            {
+                return false;//game is still going on 
+            } 
+        }
+        
+    }
+    
+    tie = true;
+    return false;
+
+
+
+
+}
+
+
+int main(int argc, char const *argv[])
+{
+   while (!funthree())//until any player wins the game
+   {
+    funtionStr();
+     Value();
+      !funthree();
+    
+   }
+   
+
+   if (token == 'X' && tie == false)
+   {
+     cout<<p2<<"Wins"<<endl;
+   }
+   else if(token == 'O' && tie == false)
+   {
+     cout<<p1<<"Wins"<<endl;
+   }
+
+   else
+   {
+    cout<<"Draw!!!"<<endl;
+   }
+   
+   
+    
+    
+    return 0;
 }
