@@ -2,30 +2,19 @@
 
 using namespace std;
 
-int space[3][3] = {{1, 2, 3},{4, 5, 6}, {7, 8, 9}};
+char space[3][3] = {{'1','2', '3'},{'4', '5', '6'}, {'7', '8', '9'}};
     // 3 rows and 3 coloums....
 
 int row, coloum; //Global variables..
 char token = 'X';
-bool tie;
-string p1, p2;
+bool tie = false;
+
+string p1 = "";
+string p2 = "";
+
 
 void funtionStr()
 {
-   
-    system("cls");
-
-    
-
-    cout<<"Enter the name of the first player: ";
-    getline(cin, p1);
-
-    cout<<"Enter the name of the second player: ";
-    getline(cin, p2);
-
-    cout<<endl<<endl<<p1<<" is player1"<<endl;
-    cout<<endl<<p2<<" is player2"<<endl<<endl<<endl;
-    
 
     //#Structure:
 
@@ -122,7 +111,7 @@ void Value()
         // position = 9
     }
 
-    else
+    else if(digit < 1 || digit > 9)
     {
         cout<<"Invalid Input!"<<endl;
         cout<<"Try Again"<<endl;
@@ -149,6 +138,7 @@ void Value()
         //To play it again
     }
      
+    funtionStr();
 
 }
 
@@ -201,6 +191,21 @@ bool funthree(){ //For game going on or draw
 
 int main(int argc, char const *argv[])
 {
+
+     system("cls");
+
+    
+
+    cout<<"Enter the name of the first player: ";
+    getline(cin, p1);
+
+    cout<<"Enter the name of the second player: ";
+    getline(cin, p2);
+
+    cout<<endl<<endl<<p1<<" is player1"<<endl;
+    cout<<endl<<p2<<" is player2"<<endl<<endl<<endl;
+    
+
    while (!funthree())//until any player wins the game
    {
     funtionStr();
