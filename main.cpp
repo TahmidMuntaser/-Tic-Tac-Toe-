@@ -5,7 +5,9 @@ using namespace std;
 int space[3][3] = {{1, 2, 3},{4, 5, 6}, {7, 8, 9}};
     // 3 rows and 3 coloums....
 
-int row, coloum; //Global variables
+int row, coloum; //Global variables..
+char token = 'x';
+
 
 void funtionStr()
 {
@@ -42,5 +44,12 @@ void funtionStr()
 void Value()
 {
     int digit;
+
+    if (token == 'x')
+    {
+        cout<<p1<<"please enter: ";
+        cin>>digit;
+    }
+    
 
 }
