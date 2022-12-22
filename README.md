@@ -1,5 +1,7 @@
 # -Tic-Tac-Toe-
  
+ 
+*Warning: "It has bug"...
 
 
  Tic Tac Toe in C++
